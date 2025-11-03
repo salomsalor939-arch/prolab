@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProLab - Kelajagingizni Kashf Eting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+        :root {
+            --dark-bg: #121212;
+            --cyber-blue: #00AEFF;
+            --light-text: #EAEAEA;
+            --secondary-text: #B3B3B3;
+            --surface-color: #1E1E1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://raw.githubusercontent.com/az-ziyod/Pro_Lab/master/assets/images/story_background.png'); /* Fon rasmini GitHub'dan oldim, istasangiz o'zingiz yuklashingiz mumkin */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 24px;
+            max-width: 600px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 174, 255, 0.2);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background-color: var(--surface-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--cyber-blue);
+            animation: popIn 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+            opacity: 0;
+        }
+
+        .logo-icon {
+            font-size: 50px;
+            font-weight: 900;
+            color: var(--cyber-blue);
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #fff;
+            animation: slideIn 0.6s 0.4s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            margin-bottom: 30px;
+            animation: slideIn 0.6s 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .download-button {
+            display: inline-block;
+            background: var(--cyber-blue);
+            color: var(--dark-bg);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 20px 0 rgba(0, 174, 255, 0.4);
+            animation: popIn 0.5s 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+            opacity: 0;
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px 0 rgba(0, 174, 255, 0.6);
+        }
+
+        .version-info {
+            margin-top: 15px;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            animation: fadeIn 1s 1s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-icon">PZ</span>
+        </div>
+        <h1>ProLab</h1>
+        <p class="tagline">O'z kelajak kasbingizni intellektual yordamchi bilan kashf eting!</p>
+        
+        <a href="!!! SIZNING APK YUKLASH HAVOLANGIZ !!!" class="download-button" download>
+            APK Yuklab Olish
+        </a>
+
+        <p class="version-info">Test versiyasi (v1.0.0)</p>
+    </div>
+</body>
+</html>
